@@ -299,26 +299,26 @@
                 0,
                 0,
                 0,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
                 15,
                 15,
                 15,
@@ -382,46 +382,15 @@
             ],
             "autoFadeSpeed": 1,
             "id": "deb5152f-e2e8-4f16-b851-e0eb19f5831c",
-            "x": 405,
-            "y": 122,
+            "x": 404,
+            "y": 123,
             "actors": [
-                {
-                    "name": "Door 1",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "4861b4e9-b04c-4c59-913b-96b8fcdf1d82",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 15,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "persistent": false,
-                    "collisionGroup": "",
-                    "symbol": "actor_0",
-                    "script": [
-                        {
-                            "command": "EVENT_CALL_CUSTOM_EVENT",
-                            "args": {
-                                "customEventId": "8e841a6f-0481-4e09-889f-a88f1125b707"
-                            },
-                            "id": "851a2683-2eb1-4305-a5a7-43eddd728f5d"
-                        }
-                    ],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "b784ad31-3521-4d6f-b352-e3de12a703ee",
-                    "x": 8,
-                    "y": 13
-                },
                 {
                     "name": "Door 2",
                     "frame": 0,
                     "animate": false,
                     "spriteSheetId": "4861b4e9-b04c-4c59-913b-96b8fcdf1d82",
-                    "direction": "down",
+                    "direction": "up",
                     "moveSpeed": 1,
                     "animSpeed": 15,
                     "paletteId": "",
@@ -431,11 +400,30 @@
                     "symbol": "actor_1",
                     "script": [
                         {
-                            "command": "EVENT_CALL_CUSTOM_EVENT",
+                            "command": "EVENT_IF_ACTOR_DISTANCE_FROM_ACTOR",
                             "args": {
-                                "customEventId": "8e841a6f-0481-4e09-889f-a88f1125b707"
+                                "actorId": "player",
+                                "operator": "<=",
+                                "distance": {
+                                    "type": "number",
+                                    "value": null
+                                },
+                                "otherActorId": "$self$",
+                                "__collapseElse": true
                             },
-                            "id": "28b3430d-1a19-496b-b28b-ea3611a5f30f"
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                                        "args": {
+                                            "customEventId": "8e841a6f-0481-4e09-889f-a88f1125b707"
+                                        },
+                                        "id": "28b3430d-1a19-496b-b28b-ea3611a5f30f"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "38a64dca-d48d-4205-b386-0a1010db6285"
                         }
                     ],
                     "startScript": [],
@@ -444,15 +432,15 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "253f746f-9ddc-4651-bcea-12cad9222a80",
-                    "x": 12,
-                    "y": 13
+                    "x": 11,
+                    "y": 14
                 },
                 {
                     "name": "Door 3",
                     "frame": 0,
                     "animate": false,
                     "spriteSheetId": "4861b4e9-b04c-4c59-913b-96b8fcdf1d82",
-                    "direction": "down",
+                    "direction": "up",
                     "moveSpeed": 1,
                     "animSpeed": 15,
                     "paletteId": "",
@@ -462,11 +450,30 @@
                     "symbol": "actor_2",
                     "script": [
                         {
-                            "command": "EVENT_CALL_CUSTOM_EVENT",
+                            "command": "EVENT_IF_ACTOR_DISTANCE_FROM_ACTOR",
                             "args": {
-                                "customEventId": "8e841a6f-0481-4e09-889f-a88f1125b707"
+                                "actorId": "player",
+                                "operator": "<=",
+                                "distance": {
+                                    "type": "number",
+                                    "value": 0
+                                },
+                                "otherActorId": "$self$",
+                                "__collapseElse": true
                             },
-                            "id": "3b0d7122-18d9-48a8-af49-aa9f8852588f"
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                                        "args": {
+                                            "customEventId": "8e841a6f-0481-4e09-889f-a88f1125b707"
+                                        },
+                                        "id": "3b0d7122-18d9-48a8-af49-aa9f8852588f"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "019177f7-6f88-4eb5-946e-e90828767562"
                         }
                     ],
                     "startScript": [],
@@ -476,7 +483,57 @@
                     "hit3Script": [],
                     "id": "081b0070-159b-4199-b146-bde9e35e8d00",
                     "x": 16,
-                    "y": 13
+                    "y": 14
+                },
+                {
+                    "name": "Door 1",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "4861b4e9-b04c-4c59-913b-96b8fcdf1d82",
+                    "direction": "up",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "persistent": false,
+                    "symbol": "actor_0",
+                    "script": [
+                        {
+                            "command": "EVENT_IF_ACTOR_DISTANCE_FROM_ACTOR",
+                            "args": {
+                                "actorId": "player",
+                                "operator": "<=",
+                                "distance": {
+                                    "type": "number",
+                                    "value": 0
+                                },
+                                "otherActorId": "$self$",
+                                "__collapseElse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                                        "args": {
+                                            "customEventId": "8e841a6f-0481-4e09-889f-a88f1125b707",
+                                            "__collapse": false
+                                        },
+                                        "id": "0381ef8c-bb36-4edd-8bc3-13f72b5c4ebe"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "a5dc7ed2-0ed9-449e-ae7c-999c0f32f951"
+                        }
+                    ],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "4906c170-2e4b-4dfb-99ca-8891721245ea",
+                    "x": 6,
+                    "y": 14
                 }
             ],
             "triggers": [],
@@ -484,7 +541,7 @@
                 {
                     "command": "EVENT_ACTOR_HIDE",
                     "args": {
-                        "actorId": "b784ad31-3521-4d6f-b352-e3de12a703ee",
+                        "actorId": "4906c170-2e4b-4dfb-99ca-8891721245ea",
                         "__collapse": true
                     },
                     "id": "96d173ba-0fca-4179-9dfb-85d0423fa81e"
@@ -515,7 +572,7 @@
                         },
                         "y": {
                             "type": "number",
-                            "value": 13
+                            "value": 14
                         }
                     },
                     "id": "ac592a3c-ee66-4090-ba5e-97807b874b80"
@@ -1044,6 +1101,17 @@
                         "avatarId": ""
                     },
                     "id": "ea6bec86-e113-4cc7-8e13-6930d0bcb011"
+                },
+                {
+                    "command": "EVENT_SWITCH_SCENE",
+                    "args": {
+                        "sceneId": "7ae301d0-431e-42e4-a60b-985d88620fd4",
+                        "x": 0,
+                        "y": 0,
+                        "direction": "",
+                        "fadeSpeed": "2"
+                    },
+                    "id": "0c84834c-bedb-4206-8593-d7b4f5d3bf68"
                 }
             ],
             "playerHit1Script": [],
@@ -2086,86 +2154,86 @@
                 0,
                 0,
                 0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                4,
+                4,
+                4,
+                4,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                4,
+                4,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                4,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7
             ]
         },
         {
@@ -2316,7 +2384,7 @@
             "numFrames": 3,
             "type": "actor",
             "filename": "Player.png",
-            "checksum": "fda0557b5b380739eba86d8ee3a01dd70ddac2c9",
+            "checksum": "52175c121ee7d8366ffc24cd3265dc3ebf1aad5a",
             "width": 48,
             "height": 16,
             "states": [
@@ -3509,12 +3577,54 @@
             "id": "b784ad31-3521-4d6f-b352-e3de12a703ee__L0",
             "name": "Local 0",
             "symbol": "var_local_0"
+        },
+        {
+            "id": "4906c170-2e4b-4dfb-99ca-8891721245ea__L0",
+            "name": "PlayerPosition",
+            "symbol": "var_playerposition"
+        },
+        {
+            "id": "4906c170-2e4b-4dfb-99ca-8891721245ea__L1",
+            "name": "DoorPosition",
+            "symbol": "var_doorposition"
         }
     ],
     "engineFieldValues": [
         {
             "id": "fade_style",
             "value": 0
+        },
+        {
+            "id": "INPUT_TOPDOWN_INTERACT",
+            "value": "INPUT_A"
+        },
+        {
+            "id": "plat_run_acc",
+            "value": 25
+        },
+        {
+            "id": "plat_dec",
+            "value": 0
+        },
+        {
+            "id": "plat_run_vel",
+            "value": 16384
+        },
+        {
+            "id": "plat_walk_vel",
+            "value": 16384
+        },
+        {
+            "id": "plat_jump_vel",
+            "value": 0
+        },
+        {
+            "id": "plat_walk_acc",
+            "value": 500
+        },
+        {
+            "id": "plat_min_vel",
+            "value": 2000
         }
     ],
     "settings": {
@@ -3526,9 +3636,9 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 0,
-        "worldScrollY": 0,
-        "zoom": 100,
+        "worldScrollX": 1059,
+        "worldScrollY": 200,
+        "zoom": 350,
         "customColorsEnabled": true,
         "sgbEnabled": false,
         "customHead": "",
