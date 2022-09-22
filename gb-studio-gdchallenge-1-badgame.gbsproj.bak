@@ -406,7 +406,7 @@
                                 "operator": "<=",
                                 "distance": {
                                     "type": "number",
-                                    "value": null
+                                    "value": 1
                                 },
                                 "otherActorId": "$self$",
                                 "__collapseElse": true
@@ -456,7 +456,7 @@
                                 "operator": "<=",
                                 "distance": {
                                     "type": "number",
-                                    "value": 0
+                                    "value": 1
                                 },
                                 "otherActorId": "$self$",
                                 "__collapseElse": true
@@ -505,7 +505,7 @@
                                 "operator": "<=",
                                 "distance": {
                                     "type": "number",
-                                    "value": 0
+                                    "value": 1
                                 },
                                 "otherActorId": "$self$",
                                 "__collapseElse": true
@@ -1030,7 +1030,7 @@
             "symbol": "scene_logo_launch_screen"
         },
         {
-            "name": "Win",
+            "name": "Lose",
             "backgroundId": "b137e28e-2685-4cbf-ba85-a6308d0f7996",
             "width": 20,
             "height": 18,
@@ -1044,16 +1044,25 @@
             "autoFadeSpeed": 1,
             "id": "ce729711-e183-412e-b801-397173b71c4e",
             "symbol": "scene_4",
-            "x": 676,
-            "y": 89,
+            "x": 663.5,
+            "y": 121,
             "actors": [],
             "triggers": [],
             "script": [
                 {
+                    "command": "EVENT_ACTOR_HIDE",
+                    "args": {
+                        "actorId": "$self$"
+                    },
+                    "id": "6302773c-fe36-4d4a-a895-58f5ef187f34"
+                },
+                {
                     "command": "EVENT_TEXT",
                     "args": {
                         "text": [
-                            "You won!! \nCongrats."
+                            "You fight\nthe boss...",
+                            "You die...",
+                            "Try again?\n[E] to try again"
                         ],
                         "avatarId": ""
                     },
@@ -1069,49 +1078,6 @@
                         "fadeSpeed": "2"
                     },
                     "id": "88b5b01d-1fdc-4ea8-843f-4f453d015d48"
-                }
-            ],
-            "playerHit1Script": [],
-            "playerHit2Script": [],
-            "playerHit3Script": []
-        },
-        {
-            "name": "Lose",
-            "backgroundId": "b137e28e-2685-4cbf-ba85-a6308d0f7996",
-            "width": 20,
-            "height": 18,
-            "type": "POINTNCLICK",
-            "paletteIds": [],
-            "spritePaletteIds": [],
-            "collisions": [],
-            "autoFadeSpeed": 1,
-            "id": "154218bb-d16e-4d57-abf9-df046b8902eb",
-            "symbol": "scene_0",
-            "x": 665,
-            "y": 332,
-            "actors": [],
-            "triggers": [],
-            "script": [
-                {
-                    "command": "EVENT_TEXT",
-                    "args": {
-                        "text": [
-                            "You lost.. Better\nluck next time!"
-                        ],
-                        "avatarId": ""
-                    },
-                    "id": "ea6bec86-e113-4cc7-8e13-6930d0bcb011"
-                },
-                {
-                    "command": "EVENT_SWITCH_SCENE",
-                    "args": {
-                        "sceneId": "7ae301d0-431e-42e4-a60b-985d88620fd4",
-                        "x": 0,
-                        "y": 0,
-                        "direction": "",
-                        "fadeSpeed": "2"
-                    },
-                    "id": "0c84834c-bedb-4206-8593-d7b4f5d3bf68"
                 }
             ],
             "playerHit1Script": [],
@@ -2154,86 +2120,86 @@
                 0,
                 0,
                 0,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                4,
-                4,
-                4,
-                4,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                4,
-                4,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                4,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6
             ]
         },
         {
@@ -3447,7 +3413,7 @@
                                         {
                                             "command": "EVENT_SWITCH_SCENE",
                                             "args": {
-                                                "sceneId": "154218bb-d16e-4d57-abf9-df046b8902eb",
+                                                "sceneId": "ce729711-e183-412e-b801-397173b71c4e",
                                                 "x": 7,
                                                 "y": 2,
                                                 "direction": "",
@@ -3597,34 +3563,6 @@
         {
             "id": "INPUT_TOPDOWN_INTERACT",
             "value": "INPUT_A"
-        },
-        {
-            "id": "plat_run_acc",
-            "value": 25
-        },
-        {
-            "id": "plat_dec",
-            "value": 0
-        },
-        {
-            "id": "plat_run_vel",
-            "value": 16384
-        },
-        {
-            "id": "plat_walk_vel",
-            "value": 16384
-        },
-        {
-            "id": "plat_jump_vel",
-            "value": 0
-        },
-        {
-            "id": "plat_walk_acc",
-            "value": 500
-        },
-        {
-            "id": "plat_min_vel",
-            "value": 2000
         }
     ],
     "settings": {
@@ -3636,9 +3574,9 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 1059,
-        "worldScrollY": 200,
-        "zoom": 350,
+        "worldScrollX": 153,
+        "worldScrollY": 137,
+        "zoom": 250,
         "customColorsEnabled": true,
         "sgbEnabled": false,
         "customHead": "",

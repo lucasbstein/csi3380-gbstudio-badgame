@@ -406,7 +406,7 @@
                                 "operator": "<=",
                                 "distance": {
                                     "type": "number",
-                                    "value": null
+                                    "value": 1
                                 },
                                 "otherActorId": "$self$",
                                 "__collapseElse": true
@@ -456,7 +456,7 @@
                                 "operator": "<=",
                                 "distance": {
                                     "type": "number",
-                                    "value": 0
+                                    "value": 1
                                 },
                                 "otherActorId": "$self$",
                                 "__collapseElse": true
@@ -505,7 +505,7 @@
                                 "operator": "<=",
                                 "distance": {
                                     "type": "number",
-                                    "value": 0
+                                    "value": 1
                                 },
                                 "otherActorId": "$self$",
                                 "__collapseElse": true
@@ -581,7 +581,7 @@
                     "command": "EVENT_TEXT",
                     "args": {
                         "text": [
-                            "Use E to open a\ndoor. (E) Skip"
+                            "Use E to open\ndoors.\n[E] continue"
                         ],
                         "avatarId": ""
                     },
@@ -1030,8 +1030,8 @@
             "symbol": "scene_logo_launch_screen"
         },
         {
-            "name": "Win",
-            "backgroundId": "b137e28e-2685-4cbf-ba85-a6308d0f7996",
+            "name": "Lose",
+            "backgroundId": "8f9dd546-43ac-4153-b8f1-44e5e38aec08",
             "width": 20,
             "height": 18,
             "type": "POINTNCLICK",
@@ -1044,8 +1044,8 @@
             "autoFadeSpeed": 1,
             "id": "ce729711-e183-412e-b801-397173b71c4e",
             "symbol": "scene_4",
-            "x": 676,
-            "y": 89,
+            "x": 796,
+            "y": 126.5,
             "actors": [],
             "triggers": [],
             "script": [
@@ -1060,7 +1060,8 @@
                     "command": "EVENT_TEXT",
                     "args": {
                         "text": [
-                            "You won!! \nCongrats."
+                            "You die...",
+                            "Try again?\n[E] to try again"
                         ],
                         "avatarId": ""
                     },
@@ -1083,19 +1084,26 @@
             "playerHit3Script": []
         },
         {
-            "name": "Lose",
-            "backgroundId": "b137e28e-2685-4cbf-ba85-a6308d0f7996",
+            "name": "Suspense",
+            "backgroundId": "7bb59a99-ff5c-47f5-b614-3fec6cf09819",
             "width": 20,
             "height": 18,
-            "type": "POINTNCLICK",
-            "paletteIds": [],
-            "spritePaletteIds": [],
+            "type": "TOPDOWN",
+            "paletteIds": [
+                null,
+                null,
+                null,
+                ""
+            ],
+            "spritePaletteIds": [
+                ""
+            ],
             "collisions": [],
             "autoFadeSpeed": 1,
-            "id": "154218bb-d16e-4d57-abf9-df046b8902eb",
+            "id": "c959cd46-8998-4f9d-a3c8-707672cdf934",
             "symbol": "scene_0",
-            "x": 665,
-            "y": 332,
+            "x": 602.5,
+            "y": 127.5,
             "actors": [],
             "triggers": [],
             "script": [
@@ -1104,28 +1112,28 @@
                     "args": {
                         "actorId": "$self$"
                     },
-                    "id": "966a1c31-323f-4b1d-84e9-3a12aadbb9bc"
+                    "id": "2b8e67f4-4568-4205-ba48-e1044af5771e"
                 },
                 {
                     "command": "EVENT_TEXT",
                     "args": {
                         "text": [
-                            "You lost.. Better\nluck next time!"
+                            "You fight\nthe boss..."
                         ],
                         "avatarId": ""
                     },
-                    "id": "ea6bec86-e113-4cc7-8e13-6930d0bcb011"
+                    "id": "12dc709d-0753-462a-92ac-a76bb063d0d5"
                 },
                 {
                     "command": "EVENT_SWITCH_SCENE",
                     "args": {
-                        "sceneId": "7ae301d0-431e-42e4-a60b-985d88620fd4",
+                        "sceneId": "ce729711-e183-412e-b801-397173b71c4e",
                         "x": 0,
                         "y": 0,
                         "direction": "",
                         "fadeSpeed": "2"
                     },
-                    "id": "0c84834c-bedb-4206-8593-d7b4f5d3bf68"
+                    "id": "24a368ba-a76a-490b-ab12-485d147e0cb7"
                 }
             ],
             "playerHit1Script": [],
@@ -1134,6 +1142,36 @@
         }
     ],
     "backgrounds": [
+        {
+            "id": "3e1c2f9a-afba-4c14-a43e-042bbc67dfde",
+            "name": "blue-clean-fight",
+            "symbol": "bg_blue_clean_fight",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "blue-clean-fight.png"
+        },
+        {
+            "id": "8f9dd546-43ac-4153-b8f1-44e5e38aec08",
+            "name": "blue-clean-lose",
+            "symbol": "bg_blue_clean_lose",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "blue-clean-lose.png"
+        },
+        {
+            "id": "7bb59a99-ff5c-47f5-b614-3fec6cf09819",
+            "name": "blue-clean-suspense",
+            "symbol": "bg_blue_clean_suspense",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "blue-clean-suspense.png"
+        },
         {
             "id": "63ad39ff-d8ed-434e-af5f-08e9a4d8a3f0",
             "name": "blue-clean-title",
@@ -2168,86 +2206,86 @@
                 0,
                 0,
                 0,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                4,
-                4,
-                4,
-                4,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                4,
-                4,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                4,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7,
-                7
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6
             ]
         },
         {
@@ -3448,7 +3486,7 @@
                                         {
                                             "command": "EVENT_SWITCH_SCENE",
                                             "args": {
-                                                "sceneId": "ce729711-e183-412e-b801-397173b71c4e",
+                                                "sceneId": "c959cd46-8998-4f9d-a3c8-707672cdf934",
                                                 "x": 0,
                                                 "y": 0,
                                                 "direction": "",
@@ -3461,7 +3499,7 @@
                                         {
                                             "command": "EVENT_SWITCH_SCENE",
                                             "args": {
-                                                "sceneId": "154218bb-d16e-4d57-abf9-df046b8902eb",
+                                                "sceneId": "c959cd46-8998-4f9d-a3c8-707672cdf934",
                                                 "x": 7,
                                                 "y": 2,
                                                 "direction": "",
@@ -3601,6 +3639,16 @@
             "id": "4906c170-2e4b-4dfb-99ca-8891721245ea__L1",
             "name": "DoorPosition",
             "symbol": "var_doorposition"
+        },
+        {
+            "id": "deb5152f-e2e8-4f16-b851-e0eb19f5831c__L0",
+            "name": "Local 0",
+            "symbol": "var_local_1"
+        },
+        {
+            "id": "2",
+            "name": "Variable 2",
+            "symbol": "var_variable_2"
         }
     ],
     "engineFieldValues": [
@@ -3611,34 +3659,6 @@
         {
             "id": "INPUT_TOPDOWN_INTERACT",
             "value": "INPUT_A"
-        },
-        {
-            "id": "plat_run_acc",
-            "value": 25
-        },
-        {
-            "id": "plat_dec",
-            "value": 0
-        },
-        {
-            "id": "plat_run_vel",
-            "value": 16384
-        },
-        {
-            "id": "plat_walk_vel",
-            "value": 16384
-        },
-        {
-            "id": "plat_jump_vel",
-            "value": 0
-        },
-        {
-            "id": "plat_walk_acc",
-            "value": 500
-        },
-        {
-            "id": "plat_min_vel",
-            "value": 2000
         }
     ],
     "settings": {
@@ -3650,7 +3670,7 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 324,
+        "worldScrollX": 333,
         "worldScrollY": 0,
         "zoom": 200,
         "customColorsEnabled": true,
