@@ -586,6 +586,19 @@
                         "avatarId": ""
                     },
                     "id": "dc21c7f3-12d3-4d44-a991-ef52f9de9f57"
+                },
+                {
+                    "command": "EVENT_SOUND_PLAY_EFFECT",
+                    "args": {
+                        "type": "tone",
+                        "priority": "medium",
+                        "pitch": 4,
+                        "frequency": 400,
+                        "duration": 0.1,
+                        "wait": true,
+                        "effect": 0
+                    },
+                    "id": "cc1f914b-e1ec-4750-9620-eb37f8eda1ff"
                 }
             ],
             "playerHit1Script": [],
@@ -1050,6 +1063,19 @@
             "triggers": [],
             "script": [
                 {
+                    "command": "EVENT_SOUND_PLAY_EFFECT",
+                    "args": {
+                        "type": "d2aeb6c4-8cca-469c-b472-23d30f3026d3",
+                        "priority": "medium",
+                        "pitch": 4,
+                        "frequency": 200,
+                        "duration": 0.5,
+                        "wait": true,
+                        "effect": 0
+                    },
+                    "id": "99bfd04f-af32-49a8-8fda-7e6b445ef2cd"
+                },
+                {
                     "command": "EVENT_ACTOR_HIDE",
                     "args": {
                         "actorId": "$self$"
@@ -1066,6 +1092,19 @@
                         "avatarId": ""
                     },
                     "id": "adb700e5-dcc9-4536-ba73-076f38afe8d5"
+                },
+                {
+                    "command": "EVENT_SOUND_PLAY_EFFECT",
+                    "args": {
+                        "type": "tone",
+                        "priority": "medium",
+                        "pitch": 4,
+                        "frequency": 400,
+                        "duration": 0.1,
+                        "wait": true,
+                        "effect": 0
+                    },
+                    "id": "313a7fc5-3c1d-4710-9246-b6133e2dc8c8"
                 },
                 {
                     "command": "EVENT_SWITCH_SCENE",
@@ -1125,6 +1164,19 @@
                     "id": "12dc709d-0753-462a-92ac-a76bb063d0d5"
                 },
                 {
+                    "command": "EVENT_SOUND_PLAY_EFFECT",
+                    "args": {
+                        "type": "tone",
+                        "priority": "medium",
+                        "pitch": 8,
+                        "frequency": 400,
+                        "duration": 0.1,
+                        "wait": true,
+                        "effect": 0
+                    },
+                    "id": "f336af77-e089-4b15-8a5b-f84eda774a1a"
+                },
+                {
                     "command": "EVENT_SWITCH_SCENE",
                     "args": {
                         "sceneId": "ce729711-e183-412e-b801-397173b71c4e",
@@ -1150,7 +1202,8 @@
             "height": 18,
             "imageWidth": 160,
             "imageHeight": 144,
-            "filename": "blue-clean-fight.png"
+            "filename": "blue-clean-fight.png",
+            "tileColors": []
         },
         {
             "id": "8f9dd546-43ac-4153-b8f1-44e5e38aec08",
@@ -1160,7 +1213,8 @@
             "height": 18,
             "imageWidth": 160,
             "imageHeight": 144,
-            "filename": "blue-clean-lose.png"
+            "filename": "blue-clean-lose.png",
+            "tileColors": []
         },
         {
             "id": "7bb59a99-ff5c-47f5-b614-3fec6cf09819",
@@ -1170,7 +1224,8 @@
             "height": 18,
             "imageWidth": 160,
             "imageHeight": 144,
-            "filename": "blue-clean-suspense.png"
+            "filename": "blue-clean-suspense.png",
+            "tileColors": []
         },
         {
             "id": "63ad39ff-d8ed-434e-af5f-08e9a4d8a3f0",
@@ -3426,10 +3481,24 @@
             "symbol": "script_1",
             "script": [
                 {
+                    "command": "EVENT_SOUND_PLAY_EFFECT",
+                    "args": {
+                        "type": "fef2fa57-5815-43ba-b241-fcda3a9994a5",
+                        "priority": "high",
+                        "pitch": 4,
+                        "frequency": 200,
+                        "duration": 0.5,
+                        "wait": true,
+                        "effect": 0
+                    },
+                    "id": "cee7079b-f80c-447c-a9bd-8328e58c2e4b"
+                },
+                {
                     "command": "EVENT_IF_EXPRESSION",
                     "args": {
                         "expression": "$00$ < 3",
-                        "__collapseElse": false
+                        "__collapseElse": false,
+                        "__collapse": false
                     },
                     "children": {
                         "true": [
@@ -3443,7 +3512,8 @@
                                     "value": 1,
                                     "minValue": "0",
                                     "maxValue": "32767",
-                                    "clamp": true
+                                    "clamp": true,
+                                    "__collapse": false
                                 },
                                 "id": "f116488b-cd75-47c3-8d92-d8f2253dd675"
                             },
@@ -3528,7 +3598,35 @@
             "type": "mod"
         }
     ],
-    "sounds": [],
+    "sounds": [
+        {
+            "id": "fef2fa57-5815-43ba-b241-fcda3a9994a5",
+            "name": "blipSelect.wav",
+            "symbol": "sound_blipselect_wav",
+            "filename": "blipSelect.wav",
+            "type": "wav",
+            "inode": "5066549581310789",
+            "_v": 1663966670494
+        },
+        {
+            "id": "3de57120-8acb-4da2-9de7-a2c5b570aae2",
+            "name": "mixkit-wooden-floorboard-creak-337.wav",
+            "symbol": "sound_mixkit_wooden_floorbo",
+            "filename": "mixkit-wooden-floorboard-creak-337.wav",
+            "type": "wav",
+            "inode": "5910974511439662",
+            "_v": 1663965629698
+        },
+        {
+            "id": "d2aeb6c4-8cca-469c-b472-23d30f3026d3",
+            "name": "synth.wav",
+            "symbol": "sound_synth_wav",
+            "filename": "synth.wav",
+            "type": "wav",
+            "inode": "5348024558019997",
+            "_v": 1663966837087
+        }
+    ],
     "fonts": [
         {
             "id": "4bd653f0-e08d-424e-9e5b-c1f3aaa21e47",
@@ -3626,6 +3724,11 @@
             "symbol": "var_win"
         },
         {
+            "id": "2",
+            "name": "Variable 2",
+            "symbol": "var_variable_2"
+        },
+        {
             "id": "b784ad31-3521-4d6f-b352-e3de12a703ee__L0",
             "name": "Local 0",
             "symbol": "var_local_0"
@@ -3644,11 +3747,6 @@
             "id": "deb5152f-e2e8-4f16-b851-e0eb19f5831c__L0",
             "name": "Local 0",
             "symbol": "var_local_1"
-        },
-        {
-            "id": "2",
-            "name": "Variable 2",
-            "symbol": "var_variable_2"
         }
     ],
     "engineFieldValues": [
@@ -3700,9 +3798,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            415,
-            324,
-            209
+            418,
+            327,
+            210
         ],
         "showNavigator": true,
         "defaultFontId": "4bd653f0-e08d-424e-9e5b-c1f3aaa21e47",

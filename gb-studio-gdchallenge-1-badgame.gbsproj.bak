@@ -581,7 +581,7 @@
                     "command": "EVENT_TEXT",
                     "args": {
                         "text": [
-                            "Use E to open a\ndoor. (E) Skip"
+                            "Use E to open\ndoors.\n[E] continue"
                         ],
                         "avatarId": ""
                     },
@@ -1031,7 +1031,7 @@
         },
         {
             "name": "Lose",
-            "backgroundId": "b137e28e-2685-4cbf-ba85-a6308d0f7996",
+            "backgroundId": "8f9dd546-43ac-4153-b8f1-44e5e38aec08",
             "width": 20,
             "height": 18,
             "type": "POINTNCLICK",
@@ -1044,11 +1044,24 @@
             "autoFadeSpeed": 1,
             "id": "ce729711-e183-412e-b801-397173b71c4e",
             "symbol": "scene_4",
-            "x": 663.5,
-            "y": 121,
+            "x": 796,
+            "y": 126.5,
             "actors": [],
             "triggers": [],
             "script": [
+                {
+                    "command": "EVENT_SOUND_PLAY_EFFECT",
+                    "args": {
+                        "type": "d2aeb6c4-8cca-469c-b472-23d30f3026d3",
+                        "priority": "medium",
+                        "pitch": 4,
+                        "frequency": 200,
+                        "duration": 0.5,
+                        "wait": true,
+                        "effect": 0
+                    },
+                    "id": "99bfd04f-af32-49a8-8fda-7e6b445ef2cd"
+                },
                 {
                     "command": "EVENT_ACTOR_HIDE",
                     "args": {
@@ -1060,7 +1073,6 @@
                     "command": "EVENT_TEXT",
                     "args": {
                         "text": [
-                            "You fight\nthe boss...",
                             "You die...",
                             "Try again?\n[E] to try again"
                         ],
@@ -1083,9 +1095,99 @@
             "playerHit1Script": [],
             "playerHit2Script": [],
             "playerHit3Script": []
+        },
+        {
+            "name": "Suspense",
+            "backgroundId": "7bb59a99-ff5c-47f5-b614-3fec6cf09819",
+            "width": 20,
+            "height": 18,
+            "type": "TOPDOWN",
+            "paletteIds": [
+                null,
+                null,
+                null,
+                ""
+            ],
+            "spritePaletteIds": [
+                ""
+            ],
+            "collisions": [],
+            "autoFadeSpeed": 1,
+            "id": "c959cd46-8998-4f9d-a3c8-707672cdf934",
+            "symbol": "scene_0",
+            "x": 602.5,
+            "y": 127.5,
+            "actors": [],
+            "triggers": [],
+            "script": [
+                {
+                    "command": "EVENT_ACTOR_HIDE",
+                    "args": {
+                        "actorId": "$self$"
+                    },
+                    "id": "2b8e67f4-4568-4205-ba48-e1044af5771e"
+                },
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "You fight\nthe boss..."
+                        ],
+                        "avatarId": ""
+                    },
+                    "id": "12dc709d-0753-462a-92ac-a76bb063d0d5"
+                },
+                {
+                    "command": "EVENT_SWITCH_SCENE",
+                    "args": {
+                        "sceneId": "ce729711-e183-412e-b801-397173b71c4e",
+                        "x": 0,
+                        "y": 0,
+                        "direction": "",
+                        "fadeSpeed": "2"
+                    },
+                    "id": "24a368ba-a76a-490b-ab12-485d147e0cb7"
+                }
+            ],
+            "playerHit1Script": [],
+            "playerHit2Script": [],
+            "playerHit3Script": []
         }
     ],
     "backgrounds": [
+        {
+            "id": "3e1c2f9a-afba-4c14-a43e-042bbc67dfde",
+            "name": "blue-clean-fight",
+            "symbol": "bg_blue_clean_fight",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "blue-clean-fight.png",
+            "tileColors": []
+        },
+        {
+            "id": "8f9dd546-43ac-4153-b8f1-44e5e38aec08",
+            "name": "blue-clean-lose",
+            "symbol": "bg_blue_clean_lose",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "blue-clean-lose.png",
+            "tileColors": []
+        },
+        {
+            "id": "7bb59a99-ff5c-47f5-b614-3fec6cf09819",
+            "name": "blue-clean-suspense",
+            "symbol": "bg_blue_clean_suspense",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "blue-clean-suspense.png",
+            "tileColors": []
+        },
         {
             "id": "63ad39ff-d8ed-434e-af5f-08e9a4d8a3f0",
             "name": "blue-clean-title",
@@ -3340,10 +3442,24 @@
             "symbol": "script_1",
             "script": [
                 {
+                    "command": "EVENT_SOUND_PLAY_EFFECT",
+                    "args": {
+                        "type": "fef2fa57-5815-43ba-b241-fcda3a9994a5",
+                        "priority": "high",
+                        "pitch": 4,
+                        "frequency": 200,
+                        "duration": 0.5,
+                        "wait": true,
+                        "effect": 0
+                    },
+                    "id": "cee7079b-f80c-447c-a9bd-8328e58c2e4b"
+                },
+                {
                     "command": "EVENT_IF_EXPRESSION",
                     "args": {
                         "expression": "$00$ < 3",
-                        "__collapseElse": false
+                        "__collapseElse": false,
+                        "__collapse": false
                     },
                     "children": {
                         "true": [
@@ -3357,7 +3473,8 @@
                                     "value": 1,
                                     "minValue": "0",
                                     "maxValue": "32767",
-                                    "clamp": true
+                                    "clamp": true,
+                                    "__collapse": false
                                 },
                                 "id": "f116488b-cd75-47c3-8d92-d8f2253dd675"
                             },
@@ -3400,7 +3517,7 @@
                                         {
                                             "command": "EVENT_SWITCH_SCENE",
                                             "args": {
-                                                "sceneId": "ce729711-e183-412e-b801-397173b71c4e",
+                                                "sceneId": "c959cd46-8998-4f9d-a3c8-707672cdf934",
                                                 "x": 0,
                                                 "y": 0,
                                                 "direction": "",
@@ -3413,7 +3530,7 @@
                                         {
                                             "command": "EVENT_SWITCH_SCENE",
                                             "args": {
-                                                "sceneId": "ce729711-e183-412e-b801-397173b71c4e",
+                                                "sceneId": "c959cd46-8998-4f9d-a3c8-707672cdf934",
                                                 "x": 7,
                                                 "y": 2,
                                                 "direction": "",
@@ -3442,7 +3559,35 @@
             "type": "mod"
         }
     ],
-    "sounds": [],
+    "sounds": [
+        {
+            "id": "fef2fa57-5815-43ba-b241-fcda3a9994a5",
+            "name": "blipSelect.wav",
+            "symbol": "sound_blipselect_wav",
+            "filename": "blipSelect.wav",
+            "type": "wav",
+            "inode": "5066549581310789",
+            "_v": 1663966670494
+        },
+        {
+            "id": "3de57120-8acb-4da2-9de7-a2c5b570aae2",
+            "name": "mixkit-wooden-floorboard-creak-337.wav",
+            "symbol": "sound_mixkit_wooden_floorbo",
+            "filename": "mixkit-wooden-floorboard-creak-337.wav",
+            "type": "wav",
+            "inode": "5910974511439662",
+            "_v": 1663965629698
+        },
+        {
+            "id": "d2aeb6c4-8cca-469c-b472-23d30f3026d3",
+            "name": "synth.wav",
+            "symbol": "sound_synth_wav",
+            "filename": "synth.wav",
+            "type": "wav",
+            "inode": "5348024558019997",
+            "_v": 1663966837087
+        }
+    ],
     "fonts": [
         {
             "id": "4bd653f0-e08d-424e-9e5b-c1f3aaa21e47",
@@ -3540,6 +3685,11 @@
             "symbol": "var_win"
         },
         {
+            "id": "2",
+            "name": "Variable 2",
+            "symbol": "var_variable_2"
+        },
+        {
             "id": "b784ad31-3521-4d6f-b352-e3de12a703ee__L0",
             "name": "Local 0",
             "symbol": "var_local_0"
@@ -3553,6 +3703,11 @@
             "id": "4906c170-2e4b-4dfb-99ca-8891721245ea__L1",
             "name": "DoorPosition",
             "symbol": "var_doorposition"
+        },
+        {
+            "id": "deb5152f-e2e8-4f16-b851-e0eb19f5831c__L0",
+            "name": "Local 0",
+            "symbol": "var_local_1"
         }
     ],
     "engineFieldValues": [
@@ -3574,9 +3729,9 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 153,
-        "worldScrollY": 137,
-        "zoom": 250,
+        "worldScrollX": 333,
+        "worldScrollY": 0,
+        "zoom": 200,
         "customColorsEnabled": true,
         "sgbEnabled": false,
         "customHead": "",
@@ -3604,9 +3759,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            415,
-            324,
-            209
+            418,
+            327,
+            210
         ],
         "showNavigator": true,
         "defaultFontId": "4bd653f0-e08d-424e-9e5b-c1f3aaa21e47",
