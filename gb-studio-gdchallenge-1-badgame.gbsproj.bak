@@ -586,6 +586,19 @@
                         "avatarId": ""
                     },
                     "id": "dc21c7f3-12d3-4d44-a991-ef52f9de9f57"
+                },
+                {
+                    "command": "EVENT_SOUND_PLAY_EFFECT",
+                    "args": {
+                        "type": "tone",
+                        "priority": "medium",
+                        "pitch": 4,
+                        "frequency": 400,
+                        "duration": 0.1,
+                        "wait": true,
+                        "effect": 0
+                    },
+                    "id": "cc1f914b-e1ec-4750-9620-eb37f8eda1ff"
                 }
             ],
             "playerHit1Script": [],
@@ -1081,6 +1094,19 @@
                     "id": "adb700e5-dcc9-4536-ba73-076f38afe8d5"
                 },
                 {
+                    "command": "EVENT_SOUND_PLAY_EFFECT",
+                    "args": {
+                        "type": "tone",
+                        "priority": "medium",
+                        "pitch": 4,
+                        "frequency": 400,
+                        "duration": 0.1,
+                        "wait": true,
+                        "effect": 0
+                    },
+                    "id": "313a7fc5-3c1d-4710-9246-b6133e2dc8c8"
+                },
+                {
                     "command": "EVENT_SWITCH_SCENE",
                     "args": {
                         "sceneId": "7ae301d0-431e-42e4-a60b-985d88620fd4",
@@ -1136,6 +1162,19 @@
                         "avatarId": ""
                     },
                     "id": "12dc709d-0753-462a-92ac-a76bb063d0d5"
+                },
+                {
+                    "command": "EVENT_SOUND_PLAY_EFFECT",
+                    "args": {
+                        "type": "tone",
+                        "priority": "medium",
+                        "pitch": 8,
+                        "frequency": 400,
+                        "duration": 0.1,
+                        "wait": true,
+                        "effect": 0
+                    },
+                    "id": "f336af77-e089-4b15-8a5b-f84eda774a1a"
                 },
                 {
                     "command": "EVENT_SWITCH_SCENE",

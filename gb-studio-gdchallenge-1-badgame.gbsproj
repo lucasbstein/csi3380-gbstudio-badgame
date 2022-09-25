@@ -573,7 +573,8 @@
                         "y": {
                             "type": "number",
                             "value": 14
-                        }
+                        },
+                        "__collapse": true
                     },
                     "id": "ac592a3c-ee66-4090-ba5e-97807b874b80"
                 },
@@ -596,7 +597,8 @@
                         "frequency": 400,
                         "duration": 0.1,
                         "wait": true,
-                        "effect": 0
+                        "effect": 0,
+                        "__collapse": true
                     },
                     "id": "cc1f914b-e1ec-4750-9620-eb37f8eda1ff"
                 }
@@ -1027,7 +1029,7 @@
                 {
                     "command": "EVENT_SWITCH_SCENE",
                     "args": {
-                        "sceneId": "deb5152f-e2e8-4f16-b851-e0eb19f5831c",
+                        "sceneId": "6d6f2c50-ca5e-4634-81de-eab229d0584a",
                         "x": 0,
                         "y": 0,
                         "direction": "right",
@@ -1186,6 +1188,180 @@
                         "fadeSpeed": "2"
                     },
                     "id": "24a368ba-a76a-490b-ab12-485d147e0cb7"
+                }
+            ],
+            "playerHit1Script": [],
+            "playerHit2Script": [],
+            "playerHit3Script": []
+        },
+        {
+            "name": "Questionnaire Scene",
+            "backgroundId": "3e1c2f9a-afba-4c14-a43e-042bbc67dfde",
+            "width": 20,
+            "height": 18,
+            "type": "TOPDOWN",
+            "paletteIds": [],
+            "spritePaletteIds": [],
+            "collisions": [],
+            "autoFadeSpeed": 1,
+            "id": "6d6f2c50-ca5e-4634-81de-eab229d0584a",
+            "symbol": "scene_5",
+            "x": 250.5,
+            "y": 319,
+            "actors": [],
+            "triggers": [],
+            "script": [
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "Hello Mr. Doorman\nDo you think you\nhave what it takes",
+                            "to defeat the\nGreat Beast within\nthese halls?",
+                            "We'll see...\nFirst I have some\nQuestions..."
+                        ],
+                        "avatarId": ""
+                    },
+                    "id": "79992640-a8c8-4c98-b937-869660c1fbb2"
+                },
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "You see a man in\nan alley dying.\nyou:"
+                        ],
+                        "avatarId": ""
+                    },
+                    "id": "cc707833-7250-4b97-bc78-736f4e2e0d1f"
+                },
+                {
+                    "command": "EVENT_MENU",
+                    "args": {
+                        "variable": "L0",
+                        "items": 3,
+                        "option1": "Help",
+                        "option2": "Ignore",
+                        "option3": "Laugh",
+                        "option4": "",
+                        "option5": "",
+                        "option6": "",
+                        "option7": "",
+                        "option8": "",
+                        "cancelOnB": true,
+                        "layout": "dialogue"
+                    },
+                    "id": "c03f49fe-ea98-45e5-9204-efdac99bd9d6"
+                },
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "I see..."
+                        ],
+                        "avatarId": ""
+                    },
+                    "id": "f5745789-8bd7-4fda-b324-a947f6b078a4"
+                },
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "You find a pouch\nfilled with coin\nyou:"
+                        ],
+                        "avatarId": ""
+                    },
+                    "id": "e824da86-33ed-43e4-91de-a507b9f92d0b"
+                },
+                {
+                    "command": "EVENT_MENU",
+                    "args": {
+                        "variable": "L0",
+                        "items": 3,
+                        "option1": "Take it",
+                        "option2": "Find the owner",
+                        "option3": "Keep Walking",
+                        "option4": "",
+                        "option5": "",
+                        "option6": "",
+                        "option7": "",
+                        "option8": "",
+                        "cancelOnB": true,
+                        "layout": "dialogue"
+                    },
+                    "id": "899cbc53-0db7-4c5b-9682-ce479fbdcfe2"
+                },
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "Quaint..."
+                        ],
+                        "avatarId": ""
+                    },
+                    "id": "9a9d652b-b265-482f-b9df-be53f01c94bc"
+                },
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "Finally, a monster\nthreatens your\nvillage, you:"
+                        ],
+                        "avatarId": ""
+                    },
+                    "id": "e0eac9b0-cc74-46e2-ada5-e5afbef823d0"
+                },
+                {
+                    "command": "EVENT_MENU",
+                    "args": {
+                        "variable": "L0",
+                        "items": 3,
+                        "option1": "Take up arms",
+                        "option2": "Run and Hide",
+                        "option3": "Join it in Chaos",
+                        "option4": "",
+                        "option5": "",
+                        "option6": "",
+                        "option7": "",
+                        "option8": "",
+                        "cancelOnB": true,
+                        "layout": "dialogue"
+                    },
+                    "id": "ca5153e3-0409-4d20-a5e4-9e891d72830a"
+                },
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "really? huh, you\ndo you pal..."
+                        ],
+                        "avatarId": ""
+                    },
+                    "id": "e0ee0e91-2b9e-488f-ad5b-582374f95629"
+                },
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "you know what...\nthis is really\nembarrasing haha..",
+                            "Turns out I gave\nyou the\npersonality quiz",
+                            "from an old\nWomen's Magazine.\neh, don't worry",
+                            "about your answers\nsays here you're\nvery sensitive",
+                            "anyway good luck\nbuddy i hear that\nthings no joke...",
+                            "maybe your \nsensitivity will\ncome in handy."
+                        ],
+                        "avatarId": ""
+                    },
+                    "id": "1be62eb2-8f13-485a-86d7-8934daf238ee"
+                },
+                {
+                    "command": "EVENT_SWITCH_SCENE",
+                    "args": {
+                        "sceneId": "deb5152f-e2e8-4f16-b851-e0eb19f5831c",
+                        "x": 0,
+                        "y": 0,
+                        "direction": "",
+                        "fadeSpeed": "2"
+                    },
+                    "id": "54e40615-0edd-436b-abdb-ca23371f486b"
                 }
             ],
             "playerHit1Script": [],
@@ -3605,7 +3781,7 @@
             "symbol": "sound_blipselect_wav",
             "filename": "blipSelect.wav",
             "type": "wav",
-            "inode": "5066549581310789",
+            "inode": "1970324837017866",
             "_v": 1663966670494
         },
         {
@@ -3614,7 +3790,7 @@
             "symbol": "sound_mixkit_wooden_floorbo",
             "filename": "mixkit-wooden-floorboard-creak-337.wav",
             "type": "wav",
-            "inode": "5910974511439662",
+            "inode": "1970324837017868",
             "_v": 1663965629698
         },
         {
@@ -3623,7 +3799,7 @@
             "symbol": "sound_synth_wav",
             "filename": "synth.wav",
             "type": "wav",
-            "inode": "5348024558019997",
+            "inode": "1970324837017869",
             "_v": 1663966837087
         }
     ],
@@ -3768,7 +3944,7 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 333,
+        "worldScrollX": 326,
         "worldScrollY": 0,
         "zoom": 200,
         "customColorsEnabled": true,
@@ -3798,9 +3974,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            418,
-            327,
-            210
+            576,
+            450,
+            289
         ],
         "showNavigator": true,
         "defaultFontId": "4bd653f0-e08d-424e-9e5b-c1f3aaa21e47",
