@@ -1064,8 +1064,8 @@
             "autoFadeSpeed": 1,
             "id": "ce729711-e183-412e-b801-397173b71c4e",
             "symbol": "scene_4",
-            "x": 709,
-            "y": 134.5,
+            "x": 710.1759923473235,
+            "y": 130.38402678436745,
             "actors": [],
             "triggers": [],
             "script": [
@@ -1225,11 +1225,18 @@
             "autoFadeSpeed": 1,
             "id": "6d6f2c50-ca5e-4634-81de-eab229d0584a",
             "symbol": "scene_5",
-            "x": 250.5,
+            "x": 251.0879961736618,
             "y": 319,
             "actors": [],
             "triggers": [],
             "script": [
+                {
+                    "command": "EVENT_ACTOR_HIDE",
+                    "args": {
+                        "actorId": "$self$"
+                    },
+                    "id": "bf7b2f2a-8b40-49ca-bbbc-360b8472032f"
+                },
                 {
                     "command": "EVENT_TEXT",
                     "args": {
@@ -1405,6 +1412,13 @@
             "actors": [],
             "triggers": [],
             "script": [
+                {
+                    "command": "EVENT_ACTOR_HIDE",
+                    "args": {
+                        "actorId": "$self$"
+                    },
+                    "id": "97b48d24-edd6-40ca-bbf7-1e64f8583208"
+                },
                 {
                     "command": "EVENT_TEXT",
                     "args": {
@@ -4746,7 +4760,7 @@
             "symbol": "sound_blipselect_wav",
             "filename": "blipSelect.wav",
             "type": "wav",
-            "inode": "24789629",
+            "inode": "562949954815023",
             "_v": 1663966670494
         },
         {
@@ -4755,7 +4769,7 @@
             "symbol": "sound_mixkit_wooden_floorbo",
             "filename": "mixkit-wooden-floorboard-creak-337.wav",
             "type": "wav",
-            "inode": "24789628",
+            "inode": "562949954815024",
             "_v": 1663965629698
         },
         {
@@ -4764,7 +4778,7 @@
             "symbol": "sound_synth_wav",
             "filename": "synth.wav",
             "type": "wav",
-            "inode": "24789627",
+            "inode": "562949954815025",
             "_v": 1663966837087
         }
     ],
@@ -4909,8 +4923,8 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 442,
-        "worldScrollY": 40,
+        "worldScrollX": 203,
+        "worldScrollY": 57,
         "zoom": 170.06913391500711,
         "customColorsEnabled": true,
         "sgbEnabled": false,
@@ -4939,9 +4953,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            205,
-            205,
-            450
+            226,
+            226,
+            496
         ],
         "showNavigator": true,
         "defaultFontId": "4bd653f0-e08d-424e-9e5b-c1f3aaa21e47",

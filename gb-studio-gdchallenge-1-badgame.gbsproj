@@ -4912,6 +4912,10 @@
         {
             "id": "INPUT_TOPDOWN_INTERACT",
             "value": "INPUT_A"
+        },
+        {
+            "id": "plat_jump_vel",
+            "value": 0
         }
     ],
     "settings": {
