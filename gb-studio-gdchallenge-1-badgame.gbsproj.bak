@@ -382,8 +382,8 @@
             ],
             "autoFadeSpeed": 1,
             "id": "deb5152f-e2e8-4f16-b851-e0eb19f5831c",
-            "x": 404,
-            "y": 123,
+            "x": 351.5,
+            "y": 128.5,
             "actors": [
                 {
                     "name": "Door 2",
@@ -542,7 +542,7 @@
                     "command": "EVENT_ACTOR_HIDE",
                     "args": {
                         "actorId": "4906c170-2e4b-4dfb-99ca-8891721245ea",
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "id": "96d173ba-0fca-4179-9dfb-85d0423fa81e"
                 },
@@ -550,7 +550,7 @@
                     "command": "EVENT_ACTOR_HIDE",
                     "args": {
                         "actorId": "253f746f-9ddc-4651-bcea-12cad9222a80",
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "id": "de00bf4f-07f6-47e8-b3df-6f35c7c844f0"
                 },
@@ -558,7 +558,7 @@
                     "command": "EVENT_ACTOR_HIDE",
                     "args": {
                         "actorId": "081b0070-159b-4199-b146-bde9e35e8d00",
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "id": "a26f5367-2479-40ce-b893-a4a8ef6cd72e"
                 },
@@ -573,7 +573,8 @@
                         "y": {
                             "type": "number",
                             "value": 14
-                        }
+                        },
+                        "__collapse": false
                     },
                     "id": "ac592a3c-ee66-4090-ba5e-97807b874b80"
                 },
@@ -583,7 +584,8 @@
                         "text": [
                             "Use E to open\ndoors.\n[E] continue"
                         ],
-                        "avatarId": ""
+                        "avatarId": "",
+                        "__collapse": false
                     },
                     "id": "dc21c7f3-12d3-4d44-a991-ef52f9de9f57"
                 },
@@ -596,7 +598,8 @@
                         "frequency": 400,
                         "duration": 0.1,
                         "wait": true,
-                        "effect": 0
+                        "effect": 0,
+                        "__collapse": true
                     },
                     "id": "cc1f914b-e1ec-4750-9620-eb37f8eda1ff"
                 }
@@ -604,7 +607,7 @@
             "playerHit1Script": [],
             "playerHit2Script": [],
             "playerHit3Script": [],
-            "autoFadeEventCollapse": false,
+            "autoFadeEventCollapse": true,
             "playerSpriteSheetId": "cb9ffee4-2a3e-46dd-90ae-411f298b6c87",
             "symbol": "scene_game"
         },
@@ -998,7 +1001,8 @@
                         "value": "0",
                         "minValue": "0",
                         "maxValue": "32767",
-                        "clamp": false
+                        "clamp": false,
+                        "__collapse": false
                     },
                     "id": "9647ec4d-350b-4403-84e5-6584e203ebee"
                 },
@@ -1027,11 +1031,12 @@
                 {
                     "command": "EVENT_SWITCH_SCENE",
                     "args": {
-                        "sceneId": "deb5152f-e2e8-4f16-b851-e0eb19f5831c",
+                        "sceneId": "6d6f2c50-ca5e-4634-81de-eab229d0584a",
                         "x": 0,
                         "y": 0,
                         "direction": "right",
-                        "fadeSpeed": 3
+                        "fadeSpeed": 3,
+                        "__collapse": false
                     },
                     "id": "0ba493d6-ce4f-431c-ac84-9b9c3cef3b5d"
                 }
@@ -1057,8 +1062,8 @@
             "autoFadeSpeed": 1,
             "id": "ce729711-e183-412e-b801-397173b71c4e",
             "symbol": "scene_4",
-            "x": 796,
-            "y": 126.5,
+            "x": 709,
+            "y": 134.5,
             "actors": [],
             "triggers": [],
             "script": [
@@ -1094,6 +1099,20 @@
                     "id": "adb700e5-dcc9-4536-ba73-076f38afe8d5"
                 },
                 {
+                    "command": "EVENT_VARIABLE_MATH",
+                    "args": {
+                        "vectorX": "0",
+                        "operation": "set",
+                        "other": "val",
+                        "vectorY": "L0",
+                        "value": "0",
+                        "minValue": "0",
+                        "maxValue": "32767",
+                        "clamp": false
+                    },
+                    "id": "376a41cd-85fd-4179-80ab-fa5160f1946b"
+                },
+                {
                     "command": "EVENT_SOUND_PLAY_EFFECT",
                     "args": {
                         "type": "tone",
@@ -1109,7 +1128,7 @@
                 {
                     "command": "EVENT_SWITCH_SCENE",
                     "args": {
-                        "sceneId": "7ae301d0-431e-42e4-a60b-985d88620fd4",
+                        "sceneId": "deb5152f-e2e8-4f16-b851-e0eb19f5831c",
                         "x": 0,
                         "y": 0,
                         "direction": "",
@@ -1141,8 +1160,8 @@
             "autoFadeSpeed": 1,
             "id": "c959cd46-8998-4f9d-a3c8-707672cdf934",
             "symbol": "scene_0",
-            "x": 602.5,
-            "y": 127.5,
+            "x": 535,
+            "y": 131.5,
             "actors": [],
             "triggers": [],
             "script": [
@@ -1186,6 +1205,301 @@
                         "fadeSpeed": "2"
                     },
                     "id": "24a368ba-a76a-490b-ab12-485d147e0cb7"
+                }
+            ],
+            "playerHit1Script": [],
+            "playerHit2Script": [],
+            "playerHit3Script": []
+        },
+        {
+            "name": "Questionnaire Scene",
+            "backgroundId": "3e1c2f9a-afba-4c14-a43e-042bbc67dfde",
+            "width": 20,
+            "height": 18,
+            "type": "TOPDOWN",
+            "paletteIds": [],
+            "spritePaletteIds": [],
+            "collisions": [],
+            "autoFadeSpeed": 1,
+            "id": "6d6f2c50-ca5e-4634-81de-eab229d0584a",
+            "symbol": "scene_5",
+            "x": 250.5,
+            "y": 319,
+            "actors": [],
+            "triggers": [],
+            "script": [
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "Hello Mr. Doorman\nDo you think you\nhave what it takes",
+                            "to defeat the\nGreat Beast within\nthese halls?",
+                            "We'll see...\nFirst I have some\nQuestions..."
+                        ],
+                        "avatarId": ""
+                    },
+                    "id": "79992640-a8c8-4c98-b937-869660c1fbb2"
+                },
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "You see a man in\nan alley dying.\nyou:"
+                        ],
+                        "avatarId": ""
+                    },
+                    "id": "cc707833-7250-4b97-bc78-736f4e2e0d1f"
+                },
+                {
+                    "command": "EVENT_MENU",
+                    "args": {
+                        "variable": "L0",
+                        "items": 3,
+                        "option1": "Help",
+                        "option2": "Ignore",
+                        "option3": "Laugh",
+                        "option4": "",
+                        "option5": "",
+                        "option6": "",
+                        "option7": "",
+                        "option8": "",
+                        "cancelOnB": true,
+                        "layout": "dialogue"
+                    },
+                    "id": "c03f49fe-ea98-45e5-9204-efdac99bd9d6"
+                },
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "I see..."
+                        ],
+                        "avatarId": ""
+                    },
+                    "id": "f5745789-8bd7-4fda-b324-a947f6b078a4"
+                },
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "You find a pouch\nfilled with coin\nyou:"
+                        ],
+                        "avatarId": ""
+                    },
+                    "id": "e824da86-33ed-43e4-91de-a507b9f92d0b"
+                },
+                {
+                    "command": "EVENT_MENU",
+                    "args": {
+                        "variable": "L0",
+                        "items": 3,
+                        "option1": "Take it",
+                        "option2": "Find the owner",
+                        "option3": "Keep Walking",
+                        "option4": "",
+                        "option5": "",
+                        "option6": "",
+                        "option7": "",
+                        "option8": "",
+                        "cancelOnB": true,
+                        "layout": "dialogue"
+                    },
+                    "id": "899cbc53-0db7-4c5b-9682-ce479fbdcfe2"
+                },
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "Quaint..."
+                        ],
+                        "avatarId": ""
+                    },
+                    "id": "9a9d652b-b265-482f-b9df-be53f01c94bc"
+                },
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "Finally, a monster\nthreatens your\nvillage, you:"
+                        ],
+                        "avatarId": ""
+                    },
+                    "id": "e0eac9b0-cc74-46e2-ada5-e5afbef823d0"
+                },
+                {
+                    "command": "EVENT_MENU",
+                    "args": {
+                        "variable": "L0",
+                        "items": 3,
+                        "option1": "Take up arms",
+                        "option2": "Run and Hide",
+                        "option3": "Join it in Chaos",
+                        "option4": "",
+                        "option5": "",
+                        "option6": "",
+                        "option7": "",
+                        "option8": "",
+                        "cancelOnB": true,
+                        "layout": "dialogue"
+                    },
+                    "id": "ca5153e3-0409-4d20-a5e4-9e891d72830a"
+                },
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "really? huh, you\ndo you pal..."
+                        ],
+                        "avatarId": ""
+                    },
+                    "id": "e0ee0e91-2b9e-488f-ad5b-582374f95629"
+                },
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "you know what...\nthis is really\nembarrasing haha..",
+                            "Turns out I gave\nyou the\npersonality quiz",
+                            "from an old\nWomen's Magazine.\neh, don't worry",
+                            "about your answers\nsays here you're\nvery sensitive",
+                            "anyway good luck\nbuddy i hear that\nthings no joke...",
+                            "maybe your \nsensitivity will\ncome in handy."
+                        ],
+                        "avatarId": ""
+                    },
+                    "id": "1be62eb2-8f13-485a-86d7-8934daf238ee"
+                },
+                {
+                    "command": "EVENT_SWITCH_SCENE",
+                    "args": {
+                        "sceneId": "58e757f6-738f-4da3-b982-e711c6dbe73d",
+                        "x": 0,
+                        "y": 0,
+                        "direction": "",
+                        "fadeSpeed": "2",
+                        "__collapse": false
+                    },
+                    "id": "54e40615-0edd-436b-abdb-ca23371f486b"
+                }
+            ],
+            "playerHit1Script": [],
+            "playerHit2Script": [],
+            "playerHit3Script": []
+        },
+        {
+            "name": "Fake Player Customization",
+            "backgroundId": "3e1c2f9a-afba-4c14-a43e-042bbc67dfde",
+            "width": 20,
+            "height": 18,
+            "type": "TOPDOWN",
+            "paletteIds": [],
+            "spritePaletteIds": [],
+            "collisions": [],
+            "autoFadeSpeed": 1,
+            "id": "58e757f6-738f-4da3-b982-e711c6dbe73d",
+            "symbol": "scene_6",
+            "x": 451,
+            "y": 317.5,
+            "actors": [],
+            "triggers": [],
+            "script": [
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "How tall do \nyou want your \ncharacter?"
+                        ],
+                        "avatarId": "",
+                        "__collapse": false
+                    },
+                    "id": "bf4990f7-4863-4b4a-b55a-1b4c49a5ebde"
+                },
+                {
+                    "command": "EVENT_MENU",
+                    "args": {
+                        "variable": "L0",
+                        "items": 3,
+                        "option1": "Short",
+                        "option2": "Average",
+                        "option3": "Tall",
+                        "option4": "",
+                        "option5": "",
+                        "option6": "",
+                        "option7": "",
+                        "option8": "",
+                        "cancelOnB": true,
+                        "layout": "menu",
+                        "__collapse": false
+                    },
+                    "id": "e95b1aa3-5315-4e54-908c-d2585b99463f"
+                },
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "What color do\nyou want your\ncharacter to be?"
+                        ],
+                        "avatarId": ""
+                    },
+                    "id": "5fcee362-1edb-4b55-a218-19a512aa33f2"
+                },
+                {
+                    "command": "EVENT_MENU",
+                    "args": {
+                        "variable": "L0",
+                        "items": 3,
+                        "option1": "Purple",
+                        "option2": "Green",
+                        "option3": "Red",
+                        "option4": "",
+                        "option5": "",
+                        "option6": "",
+                        "option7": "",
+                        "option8": "",
+                        "cancelOnB": true,
+                        "layout": "menu"
+                    },
+                    "id": "86b4e18a-f5b3-40cf-9c63-c732758fbd52"
+                },
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "What color hat do\nyou want?"
+                        ],
+                        "avatarId": ""
+                    },
+                    "id": "1b1ed638-0e67-4560-819a-2050d3a2e66b"
+                },
+                {
+                    "command": "EVENT_MENU",
+                    "args": {
+                        "variable": "L0",
+                        "items": 2,
+                        "option1": "Yellow",
+                        "option2": "Pink",
+                        "option3": "",
+                        "option4": "",
+                        "option5": "",
+                        "option6": "",
+                        "option7": "",
+                        "option8": "",
+                        "cancelOnB": true,
+                        "layout": "menu"
+                    },
+                    "id": "d8bc5e3e-3d7f-49aa-9915-0508cce892fc"
+                },
+                {
+                    "command": "EVENT_SWITCH_SCENE",
+                    "args": {
+                        "sceneId": "deb5152f-e2e8-4f16-b851-e0eb19f5831c",
+                        "x": 0,
+                        "y": 0,
+                        "direction": "",
+                        "fadeSpeed": "2",
+                        "__collapse": false
+                    },
+                    "id": "5b748c77-c709-4df5-9fa0-31826a1b14f0"
                 }
             ],
             "playerHit1Script": [],
@@ -3560,7 +3874,8 @@
                                                 "x": 0,
                                                 "y": 0,
                                                 "direction": "",
-                                                "fadeSpeed": "2"
+                                                "fadeSpeed": "2",
+                                                "__collapse": false
                                             },
                                             "id": "17debfac-62d0-4af5-b380-60d5999ff9cf"
                                         }
@@ -3605,7 +3920,7 @@
             "symbol": "sound_blipselect_wav",
             "filename": "blipSelect.wav",
             "type": "wav",
-            "inode": "5066549581310789",
+            "inode": "4503599627775432",
             "_v": 1663966670494
         },
         {
@@ -3614,7 +3929,7 @@
             "symbol": "sound_mixkit_wooden_floorbo",
             "filename": "mixkit-wooden-floorboard-creak-337.wav",
             "type": "wav",
-            "inode": "5910974511439662",
+            "inode": "7599824371592655",
             "_v": 1663965629698
         },
         {
@@ -3623,7 +3938,7 @@
             "symbol": "sound_synth_wav",
             "filename": "synth.wav",
             "type": "wav",
-            "inode": "5348024558019997",
+            "inode": "3940649674354156",
             "_v": 1663966837087
         }
     ],
@@ -3768,7 +4083,7 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 333,
+        "worldScrollX": 340,
         "worldScrollY": 0,
         "zoom": 200,
         "customColorsEnabled": true,
@@ -3798,8 +4113,8 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            418,
-            327,
+            419,
+            326,
             210
         ],
         "showNavigator": true,
